@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parell o senar</title>
+</head>
+<body>
+<h2>Parell o senar</h2>
+<form>
+    <label for="num">Número: </label>
+    <input type="number" id="num" name="num">
+    <button type="button" onclick="comprovarParImpar()">Comprovar</button>
+</form>
+<p id="resultat"></p>
+
+<script>
+    function comprovarParImpar() {
+        // Obtenim el valor introduït pel usuari
+        let num = document.getElementById("num").value;
+
+        // Convertim el valor a un número
+        num = Number(num);
+
+        // Comprovem si el residu de la divisió entre 2 és 0 (si és parell)
+        if (num % 2 === 0) {
+            // Si és parell
+            document.getElementById("resultat").innerHTML = "El número " + num + " és parell.";
+        } else {
+            // Si és senar
+            document.getElementById("resultat").innerHTML = "El número " + num + " és senar.";
+        }
+    }
+</script>
+</body>
+</html>
